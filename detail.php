@@ -1,4 +1,4 @@
-<?php
+﻿<?php
      session_start();
 ?>
 <!DOCTYPE html>
@@ -36,32 +36,32 @@
       *** TOPBAR ***
       _________________________________________________________
       -->
-       <div id="top">
+      <div id="top">
         <div class="container">
           <div class="row">
-            <div class="col-lg-6 offer mb-3 mb-lg-0"></div>
+            <div class="col-lg-6 offer mb-3 mb-lg-0"><a href="#" class="btn btn-success btn-sm">Offer of the day</a><a href="#" class="ml-1">Get flat 35% off on orders over $50!</a></div>
             <div class="col-lg-6 text-center text-lg-right">
-              <ul class="menu list-inline mb-0">
-                          
-                            <?php
+                <ul class="menu list-inline mb-0">
 
-                            if(isset( $_SESSION['landloard']))
-                            {?>
+                    <?php
 
-                             <li class="list-inline-item"><a href="./Controller/LogoutController.php?Logout=ok">Logout</a></li>
-                          <?php                 
-                            }else
-                            {?>
-                            <li class="list-inline-item"><a href="#" data-toggle="modal" data-target="#login-modal">Login</a></li>
-                            <li class="list-inline-item"><a href="register.php">Register</a></li>
-                            <?php
+                    if(isset($_SESSION['landloard']))
+                    {?>
+                    <li class="list-inline-item"><a href="./Controller/LogoutController.php?Logout=ok">Logout</a></li>
+                     <?php
+                    }else
+                    {?>
+                    <li class="list-inline-item"><a href="#" data-toggle="modal" data-target="#login-modal">Login</a></li>
+                    <li class="list-inline-item"><a href="register.php">Register</a></li>
+                    <?php
 
-                            }
-                            
-                            ?>
-                            <li class="list-inline-item"><a href="contact.php">Contact</a></li>
-                         
-                        </ul>
+                    }
+
+                    ?>
+
+                    <li class="list-inline-item"><a href="contact.php">Contact</a></li>
+                     
+                </ul>
             </div>
           </div>
         </div>
@@ -73,15 +73,15 @@
                 <button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true">×</span></button>
               </div>
               <div class="modal-body">
-                <form action="./Controller/LoginController.php" method="post">
+                <form action="customer-orders.php" method="post">
                   <div class="form-group">
-                    <input id="email-modal" type="text" placeholder="username" name="username" class="form-control">
+                    <input id="email-modal" type="text" placeholder="email" class="form-control">
                   </div>
                   <div class="form-group">
-                    <input id="password-modal" type="password" name="userpassword" placeholder="password" class="form-control">
+                    <input id="password-modal" type="password" placeholder="password" class="form-control">
                   </div>
                   <p class="text-center">
-                    <button class="btn btn-primary" type="submit"><i class="fa fa-sign-in"></i> Log in</button>
+                    <button class="btn btn-primary"><i class="fa fa-sign-in"></i> Log in</button>
                   </p>
                 </form>
                 <p class="text-center text-muted">Not registered yet?</p>
@@ -277,83 +277,135 @@
       <div id="content">
         <div class="container">
           <div class="row">
-            <div class="col-md-12">
-              <div id="main-slider" class="owl-carousel owl-theme">
-                <div class="item"><img src="img/main-slider1.jpg" alt="" class="img-fluid"></div>
-                <div class="item"><img src="img/main-slider2.jpg" alt="" class="img-fluid"></div>
-                <div class="item"><img src="img/main-slider3.jpg" alt="" class="img-fluid"></div>
-                <div class="item"><img src="img/main-slider4.jpg" alt="" class="img-fluid"></div>
-              </div>
-              <!-- /#main-slider-->
+            <div class="col-lg-12">
+              <!-- breadcrumb-->
+              <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item"><a href="#">Home</a></li>
+                  <li class="breadcrumb-item"><a href="#">Ladies</a></li>
+                  <li class="breadcrumb-item"><a href="#">Tops</a></li>
+                  <li aria-current="page" class="breadcrumb-item active">White Blouse Armani</li>
+                </ol>
+              </nav>
             </div>
-          </div>
-        </div>
-        <!--
-        *** ADVANTAGES HOMEPAGE ***
-        _________________________________________________________
-        -->
-        <div id="advantages">
-          <div class="container">
-            <div class="row mb-4">
-              <div class="col-md-4">
-                <div class="box clickable d-flex flex-column justify-content-center mb-0 h-100">
-                  <div class="icon"><i class="fa fa-heart"></i></div>
-                  <h3><a href="#">We love our customers</a></h3>
-                  <p class="mb-0">We are known to provide best possible service ever</p>
+            <div class="col-lg-3 order-2 order-lg-1">
+              <!--
+              *** MENUS AND FILTERS ***
+              _________________________________________________________
+              -->
+              <div class="card sidebar-menu mb-4">
+                <div class="card-header">
+                  <h3 class="h4 card-title">Categories</h3>
+                </div>
+                <div class="card-body">
+                  <ul class="nav nav-pills flex-column category-menu">
+                    <li><a href="category.php" class="nav-link">Men <span class="badge badge-secondary">42</span></a>
+                      <ul class="list-unstyled">
+                        <li><a href="category.php" class="nav-link">T-shirts</a></li>
+                        <li><a href="category.php" class="nav-link">Shirts</a></li>
+                        <li><a href="category.php" class="nav-link">Pants</a></li>
+                        <li><a href="category.php" class="nav-link">Accessories</a></li>
+                      </ul>
+                    </li>
+                    <li><a href="category.php" class="nav-link active">Ladies  <span class="badge badge-light">123</span></a>
+                      <ul class="list-unstyled">
+                        <li><a href="category.php" class="nav-link">T-shirts</a></li>
+                        <li><a href="category.php" class="nav-link">Skirts</a></li>
+                        <li><a href="category.php" class="nav-link">Pants</a></li>
+                        <li><a href="category.php" class="nav-link">Accessories</a></li>
+                      </ul>
+                    </li>
+                    <li><a href="category.php" class="nav-link">Kids  <span class="badge badge-secondary">11</span></a>
+                      <ul class="list-unstyled">
+                        <li><a href="category.php" class="nav-link">T-shirts</a></li>
+                        <li><a href="category.php" class="nav-link">Skirts</a></li>
+                        <li><a href="category.php" class="nav-link">Pants</a></li>
+                        <li><a href="category.php" class="nav-link">Accessories</a></li>
+                      </ul>
+                    </li>
+                  </ul>
                 </div>
               </div>
-              <div class="col-md-4">
-                <div class="box clickable d-flex flex-column justify-content-center mb-0 h-100">
-                  <div class="icon"><i class="fa fa-tags"></i></div>
-                  <h3><a href="#">Best prices</a></h3>
-                  <p class="mb-0">You can check that the height of the boxes adjust when longer text like this one is used in one of them.</p>
+              <div class="card sidebar-menu mb-4">
+                <div class="card-header">
+                  <h3 class="h4 card-title">Brands <a href="#" class="btn btn-sm btn-danger pull-right"><i class="fa fa-times-circle"></i> Clear</a></h3>
                 </div>
-              </div>
-              <div class="col-md-4">
-                <div class="box clickable d-flex flex-column justify-content-center mb-0 h-100">
-                  <div class="icon"><i class="fa fa-thumbs-up"></i></div>
-                  <h3><a href="#">100% satisfaction guaranteed</a></h3>
-                  <p class="mb-0">Free returns on everything for 3 months.</p>
-                </div>
-              </div>
-            </div>
-            <!-- /.row-->
-          </div>
-          <!-- /.container-->
-        </div>
-        <!-- /#advantages-->
-        <!-- *** ADVANTAGES END ***-->
-        <!--
-        *** HOT PRODUCT SLIDESHOW ***
-        _________________________________________________________
-        -->
-        <div id="hot">
-          <div class="box py-4">
-            <div class="container">
-              <div class="row">
-                <div class="col-md-12">
-                  <h2 class="mb-0">Hot this week</h2>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="container">
-            <div class="product-slider owl-carousel owl-theme">
-              <div class="item">
-                <div class="product">
-                  <div class="flip-container">
-                    <div class="flipper">
-                      <div class="front"><a href="detail.php"><img src="img/product1.jpg" alt="" class="img-fluid"></a></div>
-                      <div class="back"><a href="detail.php"><img src="img/product1_2.jpg" alt="" class="img-fluid"></a></div>
+                <div class="card-body">
+                  <form>
+                    <div class="form-group">
+                      <div class="checkbox">
+                        <label>
+                          <input type="checkbox"> Armani  (10)
+                        </label>
+                      </div>
+                      <div class="checkbox">
+                        <label>
+                          <input type="checkbox"> Versace  (12)
+                        </label>
+                      </div>
+                      <div class="checkbox">
+                        <label>
+                          <input type="checkbox"> Carlo Bruni  (15)
+                        </label>
+                      </div>
+                      <div class="checkbox">
+                        <label>
+                          <input type="checkbox"> Jack Honey  (14)
+                        </label>
+                      </div>
                     </div>
-                  </div><a href="detail.php" class="invisible"><img src="img/product1.jpg" alt="" class="img-fluid"></a>
-                  <div class="text">
-                    <h3><a href="detail.php">Fur coat with very but very very long name</a></h3>
-                    <p class="price"> 
-                      <del></del>$143.00
-                    </p>
+                    <button class="btn btn-default btn-sm btn-primary"><i class="fa fa-pencil"></i> Apply</button>
+                  </form>
+                </div>
+              </div>
+              <div class="card sidebar-menu mb-4">
+                <div class="card-header">
+                  <h3 class="h4 card-title">Colours <a href="#" class="btn btn-sm btn-danger pull-right"><i class="fa fa-times-circle"></i> Clear</a></h3>
+                </div>
+                <div class="card-body">
+                  <form>
+                    <div class="form-group">
+                      <div class="checkbox">
+                        <label>
+                          <input type="checkbox"><span class="colour white"></span> White (14)
+                        </label>
+                      </div>
+                      <div class="checkbox">
+                        <label>
+                          <input type="checkbox"><span class="colour blue"></span> Blue (10)
+                        </label>
+                      </div>
+                      <div class="checkbox">
+                        <label>
+                          <input type="checkbox"><span class="colour green"></span>  Green (20)
+                        </label>
+                      </div>
+                      <div class="checkbox">
+                        <label>
+                          <input type="checkbox"><span class="colour yellow"></span>  Yellow (13)
+                        </label>
+                      </div>
+                      <div class="checkbox">
+                        <label>
+                          <input type="checkbox"><span class="colour red"></span>  Red (10)
+                        </label>
+                      </div>
+                    </div>
+                    <button class="btn btn-default btn-sm btn-primary"><i class="fa fa-pencil"></i> Apply</button>
+                  </form>
+                </div>
+              </div>
+              <!-- *** MENUS AND FILTERS END ***-->
+              <div class="banner"><a href="#"><img src="img/banner.jpg" alt="sales 2014" class="img-fluid"></a></div>
+            </div>
+            <div class="col-lg-9 order-1 order-lg-2">
+              <div id="productMain" class="row">
+                <div class="col-md-6">
+                  <div data-slider-id="1" class="owl-carousel shop-detail-carousel">
+                    <div class="item"> <img src="img/detailbig1.jpg" alt="" class="img-fluid"></div>
+                    <div class="item"> <img src="img/detailbig2.jpg" alt="" class="img-fluid"></div>
+                    <div class="item"> <img src="img/detailbig3.jpg" alt="" class="img-fluid"></div>
                   </div>
-                  <!-- /.text-->
                   <div class="ribbon sale">
                     <div class="theribbon">SALE</div>
                     <div class="ribbon-background"></div>
@@ -364,244 +416,152 @@
                     <div class="ribbon-background"></div>
                   </div>
                   <!-- /.ribbon-->
-                  <div class="ribbon gift">
-                    <div class="theribbon">GIFT</div>
-                    <div class="ribbon-background"></div>
-                  </div>
-                  <!-- /.ribbon-->
                 </div>
-                <!-- /.product-->
+                <div class="col-md-6">
+                  <div class="box">
+                    <h1 class="text-center">White Blouse Armani</h1>
+                    <p class="goToDescription"><a href="#details" class="scroll-to">Scroll to product details, material &amp; care and sizing</a></p>
+                    <p class="price">$124.00</p>
+                    <p class="text-center buttons"><a href="basket.php" class="btn btn-primary"><i class="fa fa-shopping-cart"></i> Add to cart</a><a href="basket.php" class="btn btn-outline-primary"><i class="fa fa-heart"></i> Add to wishlist</a></p>
+                  </div>
+                  <div data-slider-id="1" class="owl-thumbs">
+                    <button class="owl-thumb-item"><img src="img/detailsquare.jpg" alt="" class="img-fluid"></button>
+                    <button class="owl-thumb-item"><img src="img/detailsquare2.jpg" alt="" class="img-fluid"></button>
+                    <button class="owl-thumb-item"><img src="img/detailsquare3.jpg" alt="" class="img-fluid"></button>
+                  </div>
+                </div>
               </div>
-              <div class="item">
-                <div class="product">
-                  <div class="flip-container">
-                    <div class="flipper">
-                      <div class="front"><a href="detail.php"><img src="img/product2.jpg" alt="" class="img-fluid"></a></div>
-                      <div class="back"><a href="detail.php"><img src="img/product2_2.jpg" alt="" class="img-fluid"></a></div>
+              <div id="details" class="box">
+                <p></p>
+                <h4>Product details</h4>
+                <p>White lace top, woven, has a round neck, short sleeves, has knitted lining attached</p>
+                <h4>Material &amp; care</h4>
+                <ul>
+                  <li>Polyester</li>
+                  <li>Machine wash</li>
+                </ul>
+                <h4>Size &amp; Fit</h4>
+                <ul>
+                  <li>Regular fit</li>
+                  <li>The model (height 5'8" and chest 33") is wearing a size S</li>
+                </ul>
+                <blockquote>
+                  <p><em>Define style this season with Armani's new range of trendy tops, crafted with intricate details. Create a chic statement look by teaming this lace number with skinny jeans and pumps.</em></p>
+                </blockquote>
+                <hr>
+                <div class="social">
+                  <h4>Show it to your friends</h4>
+                  <p><a href="#" class="external facebook"><i class="fa fa-facebook"></i></a><a href="#" class="external gplus"><i class="fa fa-google-plus"></i></a><a href="#" class="external twitter"><i class="fa fa-twitter"></i></a><a href="#" class="email"><i class="fa fa-envelope"></i></a></p>
+                </div>
+              </div>
+              <div class="row same-height-row">
+                <div class="col-md-3 col-sm-6">
+                  <div class="box same-height">
+                    <h3>You may also like these products</h3>
+                  </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                  <div class="product same-height">
+                    <div class="flip-container">
+                      <div class="flipper">
+                        <div class="front"><a href="detail.php"><img src="img/product2.jpg" alt="" class="img-fluid"></a></div>
+                        <div class="back"><a href="detail.php"><img src="img/product2_2.jpg" alt="" class="img-fluid"></a></div>
+                      </div>
+                    </div><a href="detail.php" class="invisible"><img src="img/product2.jpg" alt="" class="img-fluid"></a>
+                    <div class="text">
+                      <h3>Fur coat</h3>
+                      <p class="price">$143</p>
                     </div>
-                  </div><a href="detail.php" class="invisible"><img src="img/product2.jpg" alt="" class="img-fluid"></a>
-                  <div class="text">
-                    <h3><a href="detail.php">White Blouse Armani</a></h3>
-                    <p class="price"> 
-                      <del>$280</del>$143.00
-                    </p>
                   </div>
-                  <!-- /.text-->
-                  <div class="ribbon sale">
-                    <div class="theribbon">SALE</div>
-                    <div class="ribbon-background"></div>
-                  </div>
-                  <!-- /.ribbon-->
-                  <div class="ribbon new">
-                    <div class="theribbon">NEW</div>
-                    <div class="ribbon-background"></div>
-                  </div>
-                  <!-- /.ribbon-->
-                  <div class="ribbon gift">
-                    <div class="theribbon">GIFT</div>
-                    <div class="ribbon-background"></div>
-                  </div>
-                  <!-- /.ribbon-->
+                  <!-- /.product-->
                 </div>
-                <!-- /.product-->
-              </div>
-              <div class="item">
-                <div class="product">
-                  <div class="flip-container">
-                    <div class="flipper">
-                      <div class="front"><a href="detail.php"><img src="img/product3.jpg" alt="" class="img-fluid"></a></div>
-                      <div class="back"><a href="detail.php"><img src="img/product3_2.jpg" alt="" class="img-fluid"></a></div>
+                <div class="col-md-3 col-sm-6">
+                  <div class="product same-height">
+                    <div class="flip-container">
+                      <div class="flipper">
+                        <div class="front"><a href="detail.php"><img src="img/product1.jpg" alt="" class="img-fluid"></a></div>
+                        <div class="back"><a href="detail.php"><img src="img/product1_2.jpg" alt="" class="img-fluid"></a></div>
+                      </div>
+                    </div><a href="detail.php" class="invisible"><img src="img/product1.jpg" alt="" class="img-fluid"></a>
+                    <div class="text">
+                      <h3>Fur coat</h3>
+                      <p class="price">$143</p>
                     </div>
-                  </div><a href="detail.php" class="invisible"><img src="img/product3.jpg" alt="" class="img-fluid"></a>
-                  <div class="text">
-                    <h3><a href="detail.php">Black Blouse Versace</a></h3>
-                    <p class="price"> 
-                      <del></del>$143.00
-                    </p>
                   </div>
-                  <!-- /.text-->
+                  <!-- /.product-->
                 </div>
-                <!-- /.product-->
-              </div>
-              <div class="item">
-                <div class="product">
-                  <div class="flip-container">
-                    <div class="flipper">
-                      <div class="front"><a href="detail.php"><img src="img/product3.jpg" alt="" class="img-fluid"></a></div>
-                      <div class="back"><a href="detail.php"><img src="img/product3_2.jpg" alt="" class="img-fluid"></a></div>
+                <div class="col-md-3 col-sm-6">
+                  <div class="product same-height">
+                    <div class="flip-container">
+                      <div class="flipper">
+                        <div class="front"><a href="detail.php"><img src="img/product3.jpg" alt="" class="img-fluid"></a></div>
+                        <div class="back"><a href="detail.php"><img src="img/product3_2.jpg" alt="" class="img-fluid"></a></div>
+                      </div>
+                    </div><a href="detail.php" class="invisible"><img src="img/product3.jpg" alt="" class="img-fluid"></a>
+                    <div class="text">
+                      <h3>Fur coat</h3>
+                      <p class="price">$143</p>
                     </div>
-                  </div><a href="detail.php" class="invisible"><img src="img/product3.jpg" alt="" class="img-fluid"></a>
-                  <div class="text">
-                    <h3><a href="detail.php">Black Blouse Versace</a></h3>
-                    <p class="price"> 
-                      <del></del>$143.00
-                    </p>
                   </div>
-                  <!-- /.text-->
+                  <!-- /.product-->
                 </div>
-                <!-- /.product-->
               </div>
-              <div class="item">
-                <div class="product">
-                  <div class="flip-container">
-                    <div class="flipper">
-                      <div class="front"><a href="detail.php"><img src="img/product2.jpg" alt="" class="img-fluid"></a></div>
-                      <div class="back"><a href="detail.php"><img src="img/product2_2.jpg" alt="" class="img-fluid"></a></div>
+              <div class="row same-height-row">
+                <div class="col-md-3 col-sm-6">
+                  <div class="box same-height">
+                    <h3>Products viewed recently</h3>
+                  </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                  <div class="product same-height">
+                    <div class="flip-container">
+                      <div class="flipper">
+                        <div class="front"><a href="detail.php"><img src="img/product2.jpg" alt="" class="img-fluid"></a></div>
+                        <div class="back"><a href="detail.php"><img src="img/product2_2.jpg" alt="" class="img-fluid"></a></div>
+                      </div>
+                    </div><a href="detail.php" class="invisible"><img src="img/product2.jpg" alt="" class="img-fluid"></a>
+                    <div class="text">
+                      <h3>Fur coat</h3>
+                      <p class="price">$143</p>
                     </div>
-                  </div><a href="detail.php" class="invisible"><img src="img/product2.jpg" alt="" class="img-fluid"></a>
-                  <div class="text">
-                    <h3><a href="detail.php">White Blouse Versace</a></h3>
-                    <p class="price"> 
-                      <del></del>$143.00
-                    </p>
                   </div>
-                  <!-- /.text-->
-                  <div class="ribbon new">
-                    <div class="theribbon">NEW</div>
-                    <div class="ribbon-background"></div>
-                  </div>
-                  <!-- /.ribbon-->
+                  <!-- /.product-->
                 </div>
-                <!-- /.product-->
-              </div>
-              <div class="item">
-                <div class="product">
-                  <div class="flip-container">
-                    <div class="flipper">
-                      <div class="front"><a href="detail.php"><img src="img/product1.jpg" alt="" class="img-fluid"></a></div>
-                      <div class="back"><a href="detail.php"><img src="img/product1_2.jpg" alt="" class="img-fluid"></a></div>
+                <div class="col-md-3 col-sm-6">
+                  <div class="product same-height">
+                    <div class="flip-container">
+                      <div class="flipper">
+                        <div class="front"><a href="detail.php"><img src="img/product1.jpg" alt="" class="img-fluid"></a></div>
+                        <div class="back"><a href="detail.php"><img src="img/product1_2.jpg" alt="" class="img-fluid"></a></div>
+                      </div>
+                    </div><a href="detail.php" class="invisible"><img src="img/product1.jpg" alt="" class="img-fluid"></a>
+                    <div class="text">
+                      <h3>Fur coat</h3>
+                      <p class="price">$143</p>
                     </div>
-                  </div><a href="detail.php" class="invisible"><img src="img/product1.jpg" alt="" class="img-fluid"></a>
-                  <div class="text">
-                    <h3><a href="detail.php">Fur coat</a></h3>
-                    <p class="price"> 
-                      <del></del>$143.00
-                    </p>
                   </div>
-                  <!-- /.text-->
-                  <div class="ribbon gift">
-                    <div class="theribbon">GIFT</div>
-                    <div class="ribbon-background"></div>
-                  </div>
-                  <!-- /.ribbon-->
+                  <!-- /.product-->
                 </div>
-                <!-- /.product-->
-              </div>
-              <div class="item">
-                <div class="product">
-                  <div class="flip-container">
-                    <div class="flipper">
-                      <div class="front"><a href="detail.php"><img src="img/product2.jpg" alt="" class="img-fluid"></a></div>
-                      <div class="back"><a href="detail.php"><img src="img/product2_2.jpg" alt="" class="img-fluid"></a></div>
+                <div class="col-md-3 col-sm-6">
+                  <div class="product same-height">
+                    <div class="flip-container">
+                      <div class="flipper">
+                        <div class="front"><a href="detail.php"><img src="img/product3.jpg" alt="" class="img-fluid"></a></div>
+                        <div class="back"><a href="detail.php"><img src="img/product3_2.jpg" alt="" class="img-fluid"></a></div>
+                      </div>
+                    </div><a href="detail.php" class="invisible"><img src="img/product3.jpg" alt="" class="img-fluid"></a>
+                    <div class="text">
+                      <h3>Fur coat</h3>
+                      <p class="price">$143</p>
                     </div>
-                  </div><a href="detail.php" class="invisible"><img src="img/product2.jpg" alt="" class="img-fluid"></a>
-                  <div class="text">
-                    <h3><a href="detail.php">White Blouse Armani</a></h3>
-                    <p class="price"> 
-                      <del>$280</del>$143.00
-                    </p>
                   </div>
-                  <!-- /.text-->
-                  <div class="ribbon sale">
-                    <div class="theribbon">SALE</div>
-                    <div class="ribbon-background"></div>
-                  </div>
-                  <!-- /.ribbon-->
-                  <div class="ribbon new">
-                    <div class="theribbon">NEW</div>
-                    <div class="ribbon-background"></div>
-                  </div>
-                  <!-- /.ribbon-->
-                  <div class="ribbon gift">
-                    <div class="theribbon">GIFT</div>
-                    <div class="ribbon-background"></div>
-                  </div>
-                  <!-- /.ribbon-->
-                </div>
-                <!-- /.product-->
-              </div>
-              <div class="item">
-                <div class="product">
-                  <div class="flip-container">
-                    <div class="flipper">
-                      <div class="front"><a href="detail.php"><img src="img/product3.jpg" alt="" class="img-fluid"></a></div>
-                      <div class="back"><a href="detail.php"><img src="img/product3_2.jpg" alt="" class="img-fluid"></a></div>
-                    </div>
-                  </div><a href="detail.php" class="invisible"><img src="img/product3.jpg" alt="" class="img-fluid"></a>
-                  <div class="text">
-                    <h3><a href="detail.php">Black Blouse Versace</a></h3>
-                    <p class="price"> 
-                      <del></del>$143.00
-                    </p>
-                  </div>
-                  <!-- /.text-->
-                </div>
-                <!-- /.product-->
-              </div>
-              <!-- /.product-slider-->
-            </div>
-            <!-- /.container-->
-          </div>
-          <!-- /#hot-->
-          <!-- *** HOT END ***-->
-        </div>
-        <!--
-        *** GET INSPIRED ***
-        _________________________________________________________
-        -->
-        <div class="container">
-          <div class="col-md-12">
-            <div class="box slideshow">
-              <h3>Get Inspired</h3>
-              <p class="lead">Get the inspiration from our world class designers</p>
-              <div id="get-inspired" class="owl-carousel owl-theme">
-                <div class="item"><a href="#"><img src="img/getinspired1.jpg" alt="Get inspired" class="img-fluid"></a></div>
-                <div class="item"><a href="#"><img src="img/getinspired2.jpg" alt="Get inspired" class="img-fluid"></a></div>
-                <div class="item"><a href="#"><img src="img/getinspired3.jpg" alt="Get inspired" class="img-fluid"></a></div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- *** GET INSPIRED END ***-->
-        <!--
-        *** BLOG HOMEPAGE ***
-        _________________________________________________________
-        -->
-        <div class="box text-center">
-          <div class="container">
-            <div class="col-md-12">
-              <h3 class="text-uppercase">From our blog</h3>
-              <p class="lead mb-0">What's new in the world of fashion? <a href="blog.php">Check our blog!</a></p>
-            </div>
-          </div>
-        </div>
-        <div class="container">
-          <div class="col-md-12">
-            <div id="blog-homepage" class="row">
-              <div class="col-sm-6">
-                <div class="post">
-                  <h4><a href="post.php">Fashion now</a></h4>
-                  <p class="author-category">By <a href="#">John Slim</a> in <a href="">Fashion and style</a></p>
-                  <hr>
-                  <p class="intro">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
-                  <p class="read-more"><a href="post.php" class="btn btn-primary">Continue reading</a></p>
-                </div>
-              </div>
-              <div class="col-sm-6">
-                <div class="post">
-                  <h4><a href="post.php">Who is who - example blog post</a></h4>
-                  <p class="author-category">By <a href="#">John Slim</a> in <a href="">About Minimal</a></p>
-                  <hr>
-                  <p class="intro">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
-                  <p class="read-more"><a href="post.php" class="btn btn-primary">Continue reading</a></p>
+                  <!-- /.product-->
                 </div>
               </div>
             </div>
-            <!-- /#blog-homepage-->
+            <!-- /.col-md-9-->
           </div>
         </div>
-        <!-- /.container-->
-        <!-- *** BLOG HOMEPAGE END ***-->
       </div>
     </div>
     <!--

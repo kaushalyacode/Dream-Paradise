@@ -1,4 +1,4 @@
-<?php
+﻿<?php
      session_start();
 ?>
 <!DOCTYPE html>
@@ -36,32 +36,32 @@
       *** TOPBAR ***
       _________________________________________________________
       -->
-       <div id="top">
+      <div id="top">
         <div class="container">
           <div class="row">
-            <div class="col-lg-6 offer mb-3 mb-lg-0"></div>
+            <div class="col-lg-6 offer mb-3 mb-lg-0"><a href="#" class="btn btn-success btn-sm">Offer of the day</a><a href="#" class="ml-1">Get flat 35% off on orders over $50!</a></div>
             <div class="col-lg-6 text-center text-lg-right">
-              <ul class="menu list-inline mb-0">
-                          
-                            <?php
+                <ul class="menu list-inline mb-0">
 
-                            if(isset( $_SESSION['landloard']))
-                            {?>
+                    <?php
 
-                             <li class="list-inline-item"><a href="./Controller/LogoutController.php?Logout=ok">Logout</a></li>
-                          <?php                 
-                            }else
-                            {?>
-                            <li class="list-inline-item"><a href="#" data-toggle="modal" data-target="#login-modal">Login</a></li>
-                            <li class="list-inline-item"><a href="register.php">Register</a></li>
-                            <?php
+                    if(isset($_SESSION['landloard']))
+                    {?>
+                    <li class="list-inline-item"><a href="./Controller/LogoutController.php?Logout=ok">Logout</a></li>
+                     <?php
+                    }else
+                    {?>
+                    <li class="list-inline-item"><a href="#" data-toggle="modal" data-target="#login-modal">Login</a></li>
+                    <li class="list-inline-item"><a href="register.php">Register</a></li>
+                    <?php
 
-                            }
-                            
-                            ?>
-                            <li class="list-inline-item"><a href="contact.php">Contact</a></li>
-                         
-                        </ul>
+                    }
+
+                    ?>
+
+                    <li class="list-inline-item"><a href="contact.php">Contact</a></li>
+                     
+                </ul>
             </div>
           </div>
         </div>
@@ -73,15 +73,15 @@
                 <button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true">×</span></button>
               </div>
               <div class="modal-body">
-                <form action="./Controller/LoginController.php" method="post">
+                <form action="customer-orders.php" method="post">
                   <div class="form-group">
-                    <input id="email-modal" type="text" placeholder="username" name="username" class="form-control">
+                    <input id="email-modal" type="text" placeholder="email" class="form-control">
                   </div>
                   <div class="form-group">
-                    <input id="password-modal" type="password" name="userpassword" placeholder="password" class="form-control">
+                    <input id="password-modal" type="password" placeholder="password" class="form-control">
                   </div>
                   <p class="text-center">
-                    <button class="btn btn-primary" type="submit"><i class="fa fa-sign-in"></i> Log in</button>
+                    <button class="btn btn-primary"><i class="fa fa-sign-in"></i> Log in</button>
                   </p>
                 </form>
                 <p class="text-center text-muted">Not registered yet?</p>
@@ -277,331 +277,80 @@
       <div id="content">
         <div class="container">
           <div class="row">
-            <div class="col-md-12">
-              <div id="main-slider" class="owl-carousel owl-theme">
-                <div class="item"><img src="img/main-slider1.jpg" alt="" class="img-fluid"></div>
-                <div class="item"><img src="img/main-slider2.jpg" alt="" class="img-fluid"></div>
-                <div class="item"><img src="img/main-slider3.jpg" alt="" class="img-fluid"></div>
-                <div class="item"><img src="img/main-slider4.jpg" alt="" class="img-fluid"></div>
-              </div>
-              <!-- /#main-slider-->
+            <div class="col-lg-12">
+              <!-- breadcrumb-->
+              <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item"><a href="#">Home</a></li>
+                  <li aria-current="page" class="breadcrumb-item active">faq</li>
+                </ol>
+              </nav>
             </div>
+            <div class="col-lg-3">
+              <!--
+              *** PAGES MENU ***
+              _________________________________________________________
+              -->
+              <div class="card sidebar-menu mb-4">
+                <div class="card-header">
+                  <h3 class="h4 card-title">Pages</h3>
+                </div>
+                <div class="card-body">
+                  <ul class="nav nav-pills flex-column">
+                    <li><a href="text.php" class="nav-link">Text page</a></li>
+                    <li><a href="contact.php" class="nav-link">Contact page</a></li>
+                    <li><a href="detail.php" class="nav-link">FAQ</a></li>
+                  </ul>
+                </div>
+              </div>
+              <!-- *** PAGES MENU END ***-->
+              <div class="banner"><a href="#"><img src="img/banner.jpg" alt="sales 2014" class="img-fluid"></a></div>
+            </div>
+            <div class="col-lg-9">
+              <div id="contact" class="box">
+                <h1>Frequently asked questions</h1>
+                <p class="lead">Are you curious about something? Do you have some kind of problem with our products?</p>
+                <p>Please feel free to contact us, our customer service center is working for you 24/7.</p>
+                <hr>
+                <div id="accordion">
+                  <div class="card border-primary mb-3">
+                    <div id="headingOne" class="card-header p-0 border-0">
+                      <h4 class="mb-0"><a href="#" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" class="btn btn-primary d-block text-left rounded-0">1. What to do if I have still not received the order?</a></h4>
+                    </div>
+                    <div id="collapseOne" aria-labelledby="headingOne" data-parent="#accordion" class="collapse show">
+                      <div class="card-body">
+                        <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+                        <ul>
+                          <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
+                          <li>Aliquam tincidunt mauris eu risus.</li>
+                          <li>Vestibulum auctor dapibus neque.</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card border-primary mb-3">
+                    <div id="headingTwo" class="card-header p-0 border-0">
+                      <h4 class="mb-0"><a href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" class="btn btn-primary d-block text-left rounded-0">2. What are the postal rates?</a></h4>
+                    </div>
+                    <div id="collapseTwo" aria-labelledby="headingTwo" data-parent="#accordion" class="collapse">
+                      <div class="card-body">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</div>
+                    </div>
+                  </div>
+                  <div class="card border-primary">
+                    <div id="headingThree" class="card-header p-0 border-0">
+                      <h4 class="mb-0"><a href="#" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree" class="btn btn-primary d-block text-left rounded-0">3. Do you send overseas?</a></h4>
+                    </div>
+                    <div id="collapseThree" aria-labelledby="headingThree" data-parent="#accordion" class="collapse">
+                      <div class="card-body">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</div>
+                    </div>
+                  </div>
+                </div>
+                <!-- /.accordion-->
+              </div>
+            </div>
+            <!-- /.col-lg-9-->
           </div>
         </div>
-        <!--
-        *** ADVANTAGES HOMEPAGE ***
-        _________________________________________________________
-        -->
-        <div id="advantages">
-          <div class="container">
-            <div class="row mb-4">
-              <div class="col-md-4">
-                <div class="box clickable d-flex flex-column justify-content-center mb-0 h-100">
-                  <div class="icon"><i class="fa fa-heart"></i></div>
-                  <h3><a href="#">We love our customers</a></h3>
-                  <p class="mb-0">We are known to provide best possible service ever</p>
-                </div>
-              </div>
-              <div class="col-md-4">
-                <div class="box clickable d-flex flex-column justify-content-center mb-0 h-100">
-                  <div class="icon"><i class="fa fa-tags"></i></div>
-                  <h3><a href="#">Best prices</a></h3>
-                  <p class="mb-0">You can check that the height of the boxes adjust when longer text like this one is used in one of them.</p>
-                </div>
-              </div>
-              <div class="col-md-4">
-                <div class="box clickable d-flex flex-column justify-content-center mb-0 h-100">
-                  <div class="icon"><i class="fa fa-thumbs-up"></i></div>
-                  <h3><a href="#">100% satisfaction guaranteed</a></h3>
-                  <p class="mb-0">Free returns on everything for 3 months.</p>
-                </div>
-              </div>
-            </div>
-            <!-- /.row-->
-          </div>
-          <!-- /.container-->
-        </div>
-        <!-- /#advantages-->
-        <!-- *** ADVANTAGES END ***-->
-        <!--
-        *** HOT PRODUCT SLIDESHOW ***
-        _________________________________________________________
-        -->
-        <div id="hot">
-          <div class="box py-4">
-            <div class="container">
-              <div class="row">
-                <div class="col-md-12">
-                  <h2 class="mb-0">Hot this week</h2>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="container">
-            <div class="product-slider owl-carousel owl-theme">
-              <div class="item">
-                <div class="product">
-                  <div class="flip-container">
-                    <div class="flipper">
-                      <div class="front"><a href="detail.php"><img src="img/product1.jpg" alt="" class="img-fluid"></a></div>
-                      <div class="back"><a href="detail.php"><img src="img/product1_2.jpg" alt="" class="img-fluid"></a></div>
-                    </div>
-                  </div><a href="detail.php" class="invisible"><img src="img/product1.jpg" alt="" class="img-fluid"></a>
-                  <div class="text">
-                    <h3><a href="detail.php">Fur coat with very but very very long name</a></h3>
-                    <p class="price"> 
-                      <del></del>$143.00
-                    </p>
-                  </div>
-                  <!-- /.text-->
-                  <div class="ribbon sale">
-                    <div class="theribbon">SALE</div>
-                    <div class="ribbon-background"></div>
-                  </div>
-                  <!-- /.ribbon-->
-                  <div class="ribbon new">
-                    <div class="theribbon">NEW</div>
-                    <div class="ribbon-background"></div>
-                  </div>
-                  <!-- /.ribbon-->
-                  <div class="ribbon gift">
-                    <div class="theribbon">GIFT</div>
-                    <div class="ribbon-background"></div>
-                  </div>
-                  <!-- /.ribbon-->
-                </div>
-                <!-- /.product-->
-              </div>
-              <div class="item">
-                <div class="product">
-                  <div class="flip-container">
-                    <div class="flipper">
-                      <div class="front"><a href="detail.php"><img src="img/product2.jpg" alt="" class="img-fluid"></a></div>
-                      <div class="back"><a href="detail.php"><img src="img/product2_2.jpg" alt="" class="img-fluid"></a></div>
-                    </div>
-                  </div><a href="detail.php" class="invisible"><img src="img/product2.jpg" alt="" class="img-fluid"></a>
-                  <div class="text">
-                    <h3><a href="detail.php">White Blouse Armani</a></h3>
-                    <p class="price"> 
-                      <del>$280</del>$143.00
-                    </p>
-                  </div>
-                  <!-- /.text-->
-                  <div class="ribbon sale">
-                    <div class="theribbon">SALE</div>
-                    <div class="ribbon-background"></div>
-                  </div>
-                  <!-- /.ribbon-->
-                  <div class="ribbon new">
-                    <div class="theribbon">NEW</div>
-                    <div class="ribbon-background"></div>
-                  </div>
-                  <!-- /.ribbon-->
-                  <div class="ribbon gift">
-                    <div class="theribbon">GIFT</div>
-                    <div class="ribbon-background"></div>
-                  </div>
-                  <!-- /.ribbon-->
-                </div>
-                <!-- /.product-->
-              </div>
-              <div class="item">
-                <div class="product">
-                  <div class="flip-container">
-                    <div class="flipper">
-                      <div class="front"><a href="detail.php"><img src="img/product3.jpg" alt="" class="img-fluid"></a></div>
-                      <div class="back"><a href="detail.php"><img src="img/product3_2.jpg" alt="" class="img-fluid"></a></div>
-                    </div>
-                  </div><a href="detail.php" class="invisible"><img src="img/product3.jpg" alt="" class="img-fluid"></a>
-                  <div class="text">
-                    <h3><a href="detail.php">Black Blouse Versace</a></h3>
-                    <p class="price"> 
-                      <del></del>$143.00
-                    </p>
-                  </div>
-                  <!-- /.text-->
-                </div>
-                <!-- /.product-->
-              </div>
-              <div class="item">
-                <div class="product">
-                  <div class="flip-container">
-                    <div class="flipper">
-                      <div class="front"><a href="detail.php"><img src="img/product3.jpg" alt="" class="img-fluid"></a></div>
-                      <div class="back"><a href="detail.php"><img src="img/product3_2.jpg" alt="" class="img-fluid"></a></div>
-                    </div>
-                  </div><a href="detail.php" class="invisible"><img src="img/product3.jpg" alt="" class="img-fluid"></a>
-                  <div class="text">
-                    <h3><a href="detail.php">Black Blouse Versace</a></h3>
-                    <p class="price"> 
-                      <del></del>$143.00
-                    </p>
-                  </div>
-                  <!-- /.text-->
-                </div>
-                <!-- /.product-->
-              </div>
-              <div class="item">
-                <div class="product">
-                  <div class="flip-container">
-                    <div class="flipper">
-                      <div class="front"><a href="detail.php"><img src="img/product2.jpg" alt="" class="img-fluid"></a></div>
-                      <div class="back"><a href="detail.php"><img src="img/product2_2.jpg" alt="" class="img-fluid"></a></div>
-                    </div>
-                  </div><a href="detail.php" class="invisible"><img src="img/product2.jpg" alt="" class="img-fluid"></a>
-                  <div class="text">
-                    <h3><a href="detail.php">White Blouse Versace</a></h3>
-                    <p class="price"> 
-                      <del></del>$143.00
-                    </p>
-                  </div>
-                  <!-- /.text-->
-                  <div class="ribbon new">
-                    <div class="theribbon">NEW</div>
-                    <div class="ribbon-background"></div>
-                  </div>
-                  <!-- /.ribbon-->
-                </div>
-                <!-- /.product-->
-              </div>
-              <div class="item">
-                <div class="product">
-                  <div class="flip-container">
-                    <div class="flipper">
-                      <div class="front"><a href="detail.php"><img src="img/product1.jpg" alt="" class="img-fluid"></a></div>
-                      <div class="back"><a href="detail.php"><img src="img/product1_2.jpg" alt="" class="img-fluid"></a></div>
-                    </div>
-                  </div><a href="detail.php" class="invisible"><img src="img/product1.jpg" alt="" class="img-fluid"></a>
-                  <div class="text">
-                    <h3><a href="detail.php">Fur coat</a></h3>
-                    <p class="price"> 
-                      <del></del>$143.00
-                    </p>
-                  </div>
-                  <!-- /.text-->
-                  <div class="ribbon gift">
-                    <div class="theribbon">GIFT</div>
-                    <div class="ribbon-background"></div>
-                  </div>
-                  <!-- /.ribbon-->
-                </div>
-                <!-- /.product-->
-              </div>
-              <div class="item">
-                <div class="product">
-                  <div class="flip-container">
-                    <div class="flipper">
-                      <div class="front"><a href="detail.php"><img src="img/product2.jpg" alt="" class="img-fluid"></a></div>
-                      <div class="back"><a href="detail.php"><img src="img/product2_2.jpg" alt="" class="img-fluid"></a></div>
-                    </div>
-                  </div><a href="detail.php" class="invisible"><img src="img/product2.jpg" alt="" class="img-fluid"></a>
-                  <div class="text">
-                    <h3><a href="detail.php">White Blouse Armani</a></h3>
-                    <p class="price"> 
-                      <del>$280</del>$143.00
-                    </p>
-                  </div>
-                  <!-- /.text-->
-                  <div class="ribbon sale">
-                    <div class="theribbon">SALE</div>
-                    <div class="ribbon-background"></div>
-                  </div>
-                  <!-- /.ribbon-->
-                  <div class="ribbon new">
-                    <div class="theribbon">NEW</div>
-                    <div class="ribbon-background"></div>
-                  </div>
-                  <!-- /.ribbon-->
-                  <div class="ribbon gift">
-                    <div class="theribbon">GIFT</div>
-                    <div class="ribbon-background"></div>
-                  </div>
-                  <!-- /.ribbon-->
-                </div>
-                <!-- /.product-->
-              </div>
-              <div class="item">
-                <div class="product">
-                  <div class="flip-container">
-                    <div class="flipper">
-                      <div class="front"><a href="detail.php"><img src="img/product3.jpg" alt="" class="img-fluid"></a></div>
-                      <div class="back"><a href="detail.php"><img src="img/product3_2.jpg" alt="" class="img-fluid"></a></div>
-                    </div>
-                  </div><a href="detail.php" class="invisible"><img src="img/product3.jpg" alt="" class="img-fluid"></a>
-                  <div class="text">
-                    <h3><a href="detail.php">Black Blouse Versace</a></h3>
-                    <p class="price"> 
-                      <del></del>$143.00
-                    </p>
-                  </div>
-                  <!-- /.text-->
-                </div>
-                <!-- /.product-->
-              </div>
-              <!-- /.product-slider-->
-            </div>
-            <!-- /.container-->
-          </div>
-          <!-- /#hot-->
-          <!-- *** HOT END ***-->
-        </div>
-        <!--
-        *** GET INSPIRED ***
-        _________________________________________________________
-        -->
-        <div class="container">
-          <div class="col-md-12">
-            <div class="box slideshow">
-              <h3>Get Inspired</h3>
-              <p class="lead">Get the inspiration from our world class designers</p>
-              <div id="get-inspired" class="owl-carousel owl-theme">
-                <div class="item"><a href="#"><img src="img/getinspired1.jpg" alt="Get inspired" class="img-fluid"></a></div>
-                <div class="item"><a href="#"><img src="img/getinspired2.jpg" alt="Get inspired" class="img-fluid"></a></div>
-                <div class="item"><a href="#"><img src="img/getinspired3.jpg" alt="Get inspired" class="img-fluid"></a></div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- *** GET INSPIRED END ***-->
-        <!--
-        *** BLOG HOMEPAGE ***
-        _________________________________________________________
-        -->
-        <div class="box text-center">
-          <div class="container">
-            <div class="col-md-12">
-              <h3 class="text-uppercase">From our blog</h3>
-              <p class="lead mb-0">What's new in the world of fashion? <a href="blog.php">Check our blog!</a></p>
-            </div>
-          </div>
-        </div>
-        <div class="container">
-          <div class="col-md-12">
-            <div id="blog-homepage" class="row">
-              <div class="col-sm-6">
-                <div class="post">
-                  <h4><a href="post.php">Fashion now</a></h4>
-                  <p class="author-category">By <a href="#">John Slim</a> in <a href="">Fashion and style</a></p>
-                  <hr>
-                  <p class="intro">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
-                  <p class="read-more"><a href="post.php" class="btn btn-primary">Continue reading</a></p>
-                </div>
-              </div>
-              <div class="col-sm-6">
-                <div class="post">
-                  <h4><a href="post.php">Who is who - example blog post</a></h4>
-                  <p class="author-category">By <a href="#">John Slim</a> in <a href="">About Minimal</a></p>
-                  <hr>
-                  <p class="intro">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
-                  <p class="read-more"><a href="post.php" class="btn btn-primary">Continue reading</a></p>
-                </div>
-              </div>
-            </div>
-            <!-- /#blog-homepage-->
-          </div>
-        </div>
-        <!-- /.container-->
-        <!-- *** BLOG HOMEPAGE END ***-->
       </div>
     </div>
     <!--
