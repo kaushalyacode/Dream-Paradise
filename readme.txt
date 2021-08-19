@@ -1,6 +1,6 @@
 ################################################################################################
 
-Readme for Obaju : e-commerce template by Bootstrapious - https://bootstrapious.com
+Readme for Group 12 : e-commerce template by Bootstrapious - https://bootstrapious.com
 
 ################################################################################################
 
