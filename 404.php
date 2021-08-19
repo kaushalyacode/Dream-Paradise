@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Obaju : e-commerce template</title>
+    <title>Group 12 : e-commerce template</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="all,follow">
@@ -44,7 +44,7 @@
 
                     <?php
 
-                    if(isset($_SESSION['landloard']))
+                    if(isset($_SESSION['landloard'])||isset($_SESSION['tenent']))
                     {?>
                     <li class="list-inline-item"><a href="./Controller/LogoutController.php?Logout=ok">Logout</a></li>
                      <?php
@@ -94,7 +94,7 @@
         
       </div>
       <nav class="navbar navbar-expand-lg">
-        <div class="container"><a href="index.php" class="navbar-brand home"><img src="img/logo.png" alt="Obaju logo" class="d-none d-md-inline-block"><img src="img/logo-small.png" alt="Obaju logo" class="d-inline-block d-md-none"><span class="sr-only">Obaju - go to homepage</span></a>
+        <div class="container"><a href="index.php" class="navbar-brand home"><img src="img/logo.png" alt="Group 12 logo" class="d-none d-md-inline-block"><img src="img/logo-small.png" alt="Group 12 logo" class="d-inline-block d-md-none"><span class="sr-only">Group 12 - go to homepage</span></a>
           <div class="navbar-buttons">
             <button type="button" data-toggle="collapse" data-target="#navigation" class="btn btn-outline-secondary navbar-toggler"><span class="sr-only">Toggle navigation</span><i class="fa fa-align-justify"></i></button>
             <button type="button" data-toggle="collapse" data-target="#search" class="btn btn-outline-secondary navbar-toggler"><span class="sr-only">Toggle search</span><i class="fa fa-search"></i></button><a href="basket.php" class="btn btn-outline-secondary navbar-toggler"><i class="fa fa-shopping-cart"></i></a>
@@ -287,7 +287,7 @@
               <div id="error-page" class="row">
                 <div class="col-md-6 mx-auto">
                   <div class="box text-center py-5">
-                    <p class="text-center"><img src="img/logo.png" alt="Obaju template"></p>
+                    <p class="text-center"><img src="img/logo.png" alt="Group 12 template"></p>
                     <h3>We are sorry - this page is not here anymore</h3>
                     <h4 class="text-muted">Error 404 - Page not found</h4>
                     <p class="text-center">To continue please use the <strong>Search form</strong> or <strong>Menu</strong> above.</p>
@@ -342,7 +342,7 @@
           <!-- /.col-lg-3-->
           <div class="col-lg-3 col-md-6">
             <h4 class="mb-3">Where to find us</h4>
-            <p><strong>Obaju Ltd.</strong><br>13/25 New Avenue<br>New Heaven<br>45Y 73J<br>England<br><strong>Great Britain</strong></p><a href="contact.php">Go to contact page</a>
+            <p><strong>Group 12 Ltd.</strong><br>13/25 New Avenue<br>New Heaven<br>45Y 73J<br>England<br><strong>Great Britain</strong></p><a href="contact.php">Go to contact page</a>
             <hr class="d-block d-md-none">
           </div>
           <!-- /.col-lg-3-->
@@ -382,7 +382,7 @@
           </div>
           <div class="col-lg-6">
             <p class="text-center text-lg-right">Template design by <a href="https://bootstrapious.com/">Bootstrapious</a>
-              <!-- If you want to remove this backlink, pls purchase an Attribution-free License @ https://bootstrapious.com/p/obaju-e-commerce-template. Big thanks!-->
+              <!-- If you want to remove this backlink, pls purchase an Attribution-free License @ https://bootstrapious.com/p/Group 12-e-commerce-template. Big thanks!-->
             </p>
           </div>
         </div>
