@@ -39,9 +39,33 @@ class Dao{
                                   $_SESSION['landloardid']= $this->row['id'];
                                   return 1;
                               }
+                              return 2;
                                                           
 
                   }
+                      return 0;                          
+    }
+    public function LoginTenent(Tenent $tenent)
+   {
+                  $this->sql="select * from Tenent  where username='".$tenent->getUserName()."' ;";
+                  echo "1";
+                  $this->result=mysqli_query($this->conn,$this->sql);
+                  echo "2";
+                  while($this->row=mysqli_fetch_assoc($this->result))
+                  { echo "3";
+                             if($tenent->getPassword() == $this->row['password'])
+                             {
+                            echo "4";
+                             $_SESSION['tenent']= $this->row['username'];
+                                  $_SESSION['tenentid']= $this->row['id'];
+                                  return 1;
+                              }
+                               echo "5";
+                              return 2;
+                                                          
+
+                  }
+                   echo "6";
                       return 0;                          
     }
      public function insertJCustomer(JobNote $jn,Customer $cus,Device $dev,$receiptionistid)
